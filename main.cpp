@@ -2,12 +2,26 @@
 using namespace std;
 
 int main() { 
-    cout << "Enter Your Name: ";
-    string name;
-    cin >> name;
-    // clear the screen
-    system("cls");
-    cout << "Hello " << name << endl;
+    int total = 0;
+    int price;
+    int counter = 0;
+    while (true)
+    {
+        cout << "Enter Item Price: ";
+        cin >> price;
+        if (price < 1)
+        {
+            break;
+        }
+        else
+        {
+            total += price;
+            counter++;
+        }
+    }
+    cout << "Total: " << total << endl;
+    cout << "Number of Items: " << counter << endl;
+    
 
     system("pause");
     return 0; 
