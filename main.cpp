@@ -1,28 +1,28 @@
 #include <iostream>
 using namespace std;
 
-int main() { 
-    int total = 0;
-    int price;
-    int counter = 0;
+int main()
+{
+    int price, total = 0, counter = 0;
     while (true)
     {
-        cout << "Enter Item Price: ";
+        cout << "Enter Item price: ";
         cin >> price;
         if (price < 1)
-        {
             break;
-        }
-        else
-        {
-            total += price;
-            counter++;
-        }
+        total += price;
+        counter++;
     }
-    cout << "Total: " << total << endl;
-    cout << "Number of Items: " << counter << endl;
+
+    cout << "You have " << counter << " items in your cart." << endl;
+    cout << "Total price is " << total << "." << endl;
+
+    // calculate 15% dicsount if total price is greater than 5000 or total products are greater than 10
+    if (total > 5000 || counter > 10)
+        total *= 0.85;
     
+    cout << "Total price after discount is " << total << "." << endl;
 
     system("pause");
-    return 0; 
+    return 0;
 }

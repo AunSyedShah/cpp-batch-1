@@ -10,10 +10,9 @@ void welcome(string x){
     cout << "Welcome " << x << endl;
 }
 
-void address()
+void noor()
 {
-    cout << "Syed Softwares" << endl;
-    cout << "DHA Phase-4, Karachi" << endl;
+    cout << "Divine Light" << endl;
 }
 
 float percentage(float marks_obtained, float total_marks)
@@ -29,11 +28,11 @@ int main() {
     sq(4);
     sq(5);
     welcome("Syed Aun");
-    address();
-    address();
-    address();
+    noor();
+    noor();
+    noor();
     welcome("Syed Aun");
-    address();
+    noor();
 
     percentage(75.5, 90);
 
