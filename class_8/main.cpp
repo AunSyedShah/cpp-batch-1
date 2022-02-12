@@ -22,9 +22,15 @@ public:
 
 int main()
 {
+    cout << "Enter Name: ";
+    string name;
+    cin >> name;
+    cout << "Enter Age: ";
+    int age;
+    cin >> age;
 
     // person object using parameterized constructor
-    Person p(20, "John");
+    Person p(age, name);
 
 
     system("pause");
