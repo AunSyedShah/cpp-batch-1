@@ -22,14 +22,9 @@ public:
 
 int main()
 {
-    // static memory allocation
-    int age = 24;
-    // dyamic memory allocation
-    int *agePtr = new int;
-    *agePtr = 25;
-    delete agePtr;
-    *agePtr = 26;
-    cout << agePtr << endl;
+
+    // person object using parameterized constructor
+    Person p(20, "John");
 
 
     system("pause");
