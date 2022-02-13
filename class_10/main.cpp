@@ -22,6 +22,11 @@ int main()
     // array declaration with pointers
     int *arrPtr = new int[10];
 
+    // normal way
+    Person noor;
+
+    Person *noorPtr = new Person();
+
     system("pause");
     return 0;
 }
