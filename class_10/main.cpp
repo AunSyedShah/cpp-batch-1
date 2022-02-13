@@ -5,27 +5,40 @@ class Person
 {
 public:
     int age;
-    void work()
-    {
-        cout << "I am working" << endl;
+    void work(){
+        cout << "Person work" << endl;
     }
 };
 
+class Teacher : public Person
+{
+public:
+    void work()
+    {
+        cout << "I am teaching" << endl;
+    }
+};
+
+class Student : public Person
+{
+    public:
+    void work()
+    {
+        cout << "I am studying" << endl;
+    }
+};
+
+// Main function for the program
 int main()
 {
-    // integer takes 4 bytes
-    int *x = new int();
+    Person *p;
 
-    // normal array declaration
-    int y[10];
-
-    // array declaration with pointers
-    int *arrPtr = new int[10];
-
-    // normal way
-    Person noor;
-
-    Person *noorPtr = new Person();
+    Teacher t;
+    p = &t;
+    p->work();
+    Student s;
+    p = &s;
+    p->work();
 
     system("pause");
     return 0;
