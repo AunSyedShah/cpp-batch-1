@@ -31,14 +31,12 @@ class Student : public Person
 // Main function for the program
 int main()
 {
-    Person *p;
-
     Teacher t;
-    p = &t;
-    p->work();
     Student s;
-    p = &s;
-    p->work();
+    Person p;
+    t.work();
+    s.work();
+    p.work();
 
     system("pause");
     return 0;
