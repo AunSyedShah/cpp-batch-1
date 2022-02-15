@@ -38,7 +38,14 @@ class Person{
 };
 
 int main() { 
-    
+    cout << "Enter Number 1: ";
+    int num1;
+    cin >> num1;
+    cout << "Enter Number 2: ";
+    int num2;
+    cin >> num2;
+    cout << num1 / num2 << endl; 
+
     system("pause");
     return 0; 
 }
