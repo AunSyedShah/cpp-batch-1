@@ -31,40 +31,14 @@ class Person{
         return this->_age;
     }
     // print function
-    virtual void print(){
-        cout << "Name: " << this->getName() << endl;
-        cout << "Age: " << this->getAge() << endl;
-    }
-};
-
-class Student:public Person{
-    private:
-    string _course;
-    public:
-    // default constructor
-    Student(){
-        _course = "";
-    }
-    // setter and getter for all private variables using this operator
-    void setCourse(string course){
-        this->_course = course;
-    }
-    string getCourse(){
-        return this->_course;
-    }
-    // print function
     void print(){
         cout << "Name: " << this->getName() << endl;
         cout << "Age: " << this->getAge() << endl;
-        cout << "Course: " << this->getCourse() << endl;
     }
 };
 
 int main() { 
-    Person *p;
-    p = new Student();
-    p->print();
-
+    
     system("pause");
     return 0; 
 }
