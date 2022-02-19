@@ -1,22 +1,13 @@
 #include <iostream>
-#include <vector>
-#include <deque>
+#include <map>
 using namespace std;
 
 int main()
 {
-    vector <int> v;
-    v.push_back(1);
-    v.push_back(2);
-    v.push_back(3);
+    map<string, string> m;
 
-    vector <int>::iterator it;
-
-    for(it = v.begin(); it < v.end(); it++){
-        cout << *it << endl;
-    }
-
-
+    m.insert(pair<string, string>("4420400000000", "syed aun"));
+    cout << m.find("4420400000000")->first << endl;
 
     system("pause");
     return 0;
