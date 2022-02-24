@@ -11,14 +11,18 @@ int main()
     int b;
     cin >> b;
 
-    if(b == 0)
+    try
     {
-        cout << "Division by zero is not possible\n";
+        if(b == 0)
+        {
+            throw b;
+        }
     }
-    else
+    catch(int b)
     {
-        cout << "Result: " << a / b << endl;
+        cout << "Division by zero is not possible" << endl;
     }
+    
 
     system("pause");
     return 0;
