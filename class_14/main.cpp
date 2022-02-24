@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <list>
 
 using namespace std;
 
@@ -19,12 +21,14 @@ class Person {
 
 int main() { 
     
-    Person *p1 = new Person();
-    p1->age = 10;
-    
-    // deep copy of p1
-    Person *p2 = new Person(*p1);
-    p2->age = 20;
+    // integer list
+    list<int> int_list;
+    int_list.push_back(1);
+    int_list.push_back(2);
+    int_list.push_back(3);
+    // itteraing through the list
+    list<int>::iterator it = int_list.begin();
+    it++;
 
 
 
