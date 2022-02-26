@@ -11,18 +11,24 @@ int main()
     int b;
     cin >> b;
 
+
+    // exception handling using try catch for a and b
+
     try
     {
-        if(b == 0)
+        if (a == 0 || b == 0)
         {
-            throw b;
+            throw "Division by zero";
+        }
+        else
+        {
+            cout << "Result: " << a / b << endl;
         }
     }
-    catch(int b)
+    catch (const char *msg)
     {
-        cout << "Division by zero is not possible" << endl;
+        cout << msg << endl;
     }
-    
 
     system("pause");
     return 0;
