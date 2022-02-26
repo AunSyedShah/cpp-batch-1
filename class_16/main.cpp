@@ -21,7 +21,9 @@ double add(double a, double b)
 
 int main()
 {
-    cout << add(10, 20);
+    cout << add(10, 20) << endl;
+    cout << add(10.5, 20.5) << endl;
+    cout << add(10.5, 20.5) << endl;
 
     system("pause");
     return 0;
