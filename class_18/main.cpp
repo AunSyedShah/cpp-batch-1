@@ -43,7 +43,7 @@ class Bat : public Mammal, public WingedAnimal
 int main()
 {
     Bat b1;
-    b1.getAge();
+    b1.Mammal::getAge();
 
 
     return 0;
