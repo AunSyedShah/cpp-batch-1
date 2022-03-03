@@ -1,49 +1,49 @@
 #include <iostream>
 using namespace std;
 
-class Mammal
+// multilevel inheritance example
+class A
 {
-private:
-    int age;
-
-protected:
-    int weight;
-
 public:
-    Mammal()
+    A()
     {
-        cout << "Mammals can give direct birth." << endl;
+        cout << "A()" << endl;
     }
-    int getAge()
+    ~A()
     {
-        return age;
+        cout << "~A()" << endl;
     }
 };
 
-class WingedAnimal
+class B : public A
 {
-private:
-    int age;
 public:
-    WingedAnimal()
+    B()
     {
-        cout << "Winged animal can flap." << endl;
+        cout << "B()" << endl;
     }
-    // get age
-    int getAge()
+    ~B()
     {
-        return age;
+        cout << "~B()" << endl;
     }
 };
 
-class Bat : public Mammal, public WingedAnimal
+class C : public B
 {
+public:
+    C()
+    {
+        cout << "C()" << endl;
+    }
+    ~C()
+    {
+        cout << "~C()" << endl;
+    }
 };
 
 int main()
 {
-    Bat b1;
-    b1.Mammal::getAge();
+    
 
 
     return 0;
