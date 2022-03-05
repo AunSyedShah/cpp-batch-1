@@ -1,24 +1,36 @@
 #include <iostream>
 using namespace std;
 
-// template class
-template <class T, int>
-class Array {
+// friend function
+class CurrentAccount
+{
+private:
+    int balance;
+
 public:
-    T* data;
-    int size;
-    Array(int size) {
-        this->size = size;
-        data = new T[size];
+    // setter
+    void setBalance(int b)
+    {
+        balance = b;
     }
-    ~Array() {
-        delete[] data;
+    // getter
+    int getBalance()
+    {
+        return balance;
     }
+    // friend function
+    friend void deposit(CurrentAccount &c, int amount);
 };
+void deposit(CurrentAccount &c, int amount)
+{
+    c.balance += amount;
+}
 
 int main()
 {
-    
+    CurrentAccount c;
+    c.setBalance(1000);
+    deposit(c, 500);
     system("pause");
     return 0;
 }
