@@ -2,39 +2,22 @@
 using namespace std;
 
 // template class
-template <class T>
-class Number
+template <class T, class U>
+class Pair
 {
-private:
-    T num;
-
 public:
-    // default constructor
-    Number()
+    T first;
+    U second;
+    Pair(T a, U b)
     {
-        num = 0;
-    }
-    // parameterized constructor
-    Number(T n)
-    {
-        num = n;
-    }
-    void print()
-    {
-        cout << num << endl;
+        first = a;
+        second = b;
     }
 };
 
 int main()
 {
-    Number <int> n1;
-    n1.print();
-    Number <float> n2(3.14);
-    n2.print();
-    Number <char> n3('a');
-    n3.print();
-    return 0;
-
+    Pair<int, double> p1(1, 2.0);
     system("pause");
     return 0;
 }
