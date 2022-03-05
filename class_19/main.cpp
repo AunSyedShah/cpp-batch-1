@@ -2,22 +2,23 @@
 using namespace std;
 
 // template class
-template <class T, class U>
-class Pair
-{
+template <class T, int>
+class Array {
 public:
-    T first;
-    U second;
-    Pair(T a, U b)
-    {
-        first = a;
-        second = b;
+    T* data;
+    int size;
+    Array(int size) {
+        this->size = size;
+        data = new T[size];
+    }
+    ~Array() {
+        delete[] data;
     }
 };
 
 int main()
 {
-    Pair<int, double> p1(1, 2.0);
+    
     system("pause");
     return 0;
 }
