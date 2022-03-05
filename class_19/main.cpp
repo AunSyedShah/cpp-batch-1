@@ -27,7 +27,9 @@ public:
 
 int main()
 {
-    
+    Number <int> n1;
+    n1.print();
+    Number <float> n2(3.14);
 
     system("pause");
     return 0;
